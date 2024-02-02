@@ -123,7 +123,7 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
     let response;
     if (isSignupFlow) {
       const { data: signUpData } = await axios.post(
-        "http://localhost:8080/auth/signup",
+        "REACT_APP_SERVER/auth/signup",
         {
           email,
           password,
@@ -132,7 +132,7 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
       response = signUpData;
     } else {
       const { data: loginData } = await axios.post(
-        "http://localhost:8080/auth/login",
+        "REACT_APP_SERVER/auth/login",
         {
           email,
           password,
