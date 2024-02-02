@@ -65,7 +65,7 @@ const Articles = () => {
 
   const fetchArticles = async () => {
     const { data: response } = await axios.get(
-      "REACT_APP_SERVER/articles"
+      "http://localhost:8080/articles"
     );
     setArticles(response);
   };
